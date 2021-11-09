@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="E2p-QJ-xyV"/>
-                                    <barButtonItem title="Item" id="R6K-dJ-CGP">
+                                    <barButtonItem title="  " id="R6K-dJ-CGP">
                                         <connections>
                                             <action selector="onEditToolbarButtonClicked:" destination="Y6W-OH-hqX" id="dOv-Yt-0ef"/>
                                         </connections>
@@ -64,6 +64,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="QN4-RT-R5a"/>
                     <connections>
+                        <outlet property="editToolbar" destination="wwX-Dm-0cu" id="UXz-ch-b1I"/>
                         <outlet property="editToolbarButton" destination="R6K-dJ-CGP" id="brc-A0-GiE"/>
                         <outlet property="memoCountLabel" destination="Ctx-qQ-LGM" id="oV1-an-P2T"/>
                         <outlet property="memoSearchBar" destination="lDa-bt-jlE" id="xaM-7I-RFX"/>
