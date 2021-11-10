@@ -24,6 +24,8 @@
 		0472636127397112003AF1F4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0472636027397112003AF1F4 /* RealmSwift */; };
 		0487B9E7273A3EA700E10950 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0487B9E6273A3EA700E10950 /* Edit.storyboard */; };
 		0487B9E9273A3EBD00E10950 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487B9E8273A3EBD00E10950 /* EditViewController.swift */; };
+		0487BA10273BA92200E10950 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487BA0E273BA92200E10950 /* SearchViewController.swift */; };
+		0487BA13273BAA5F00E10950 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0487BA12273BAA5F00E10950 /* Search.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		0472635A27396DE3003AF1F4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		0487B9E6273A3EA700E10950 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		0487B9E8273A3EBD00E10950 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		0487BA0E273BA92200E10950 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0487BA12273BAA5F00E10950 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0472634D2738F64E003AF1F4 /* HomeViewController.swift */,
+				0487BA0E273BA92200E10950 /* SearchViewController.swift */,
 				047263512738FDB0003AF1F4 /* PopupViewController.swift */,
 				0487B9E8273A3EBD00E10950 /* EditViewController.swift */,
 			);
@@ -109,6 +114,7 @@
 				0472634B2738F31C003AF1F4 /* Home.storyboard */,
 				047263532738FDD1003AF1F4 /* Popup.storyboard */,
 				0487B9E6273A3EA700E10950 /* Edit.storyboard */,
+				0487BA12273BAA5F00E10950 /* Search.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				0472634C2738F31C003AF1F4 /* Home.storyboard in Resources */,
 				04726358273906D6003AF1F4 /* HomeTableViewCell.xib in Resources */,
 				047263542738FDD1003AF1F4 /* Popup.storyboard in Resources */,
+				0487BA13273BAA5F00E10950 /* Search.storyboard in Resources */,
 				0487B9E7273A3EA700E10950 /* Edit.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +222,7 @@
 				0487B9E9273A3EBD00E10950 /* EditViewController.swift in Sources */,
 				04726357273906D6003AF1F4 /* HomeTableViewCell.swift in Sources */,
 				0472635B27396DE3003AF1F4 /* RealmModel.swift in Sources */,
+				0487BA10273BA92200E10950 /* SearchViewController.swift in Sources */,
 				047263522738FDB0003AF1F4 /* PopupViewController.swift in Sources */,
 				0472633C2738EBF5003AF1F4 /* ViewController.swift in Sources */,
 				047263382738EBF5003AF1F4 /* AppDelegate.swift in Sources */,

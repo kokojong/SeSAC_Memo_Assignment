@@ -17,18 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctx-qQ-LGM">
-                                <rect key="frame" x="8" y="44" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-bt-jlE">
-                                <rect key="frame" x="0.0" y="73" width="375" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-3V-PT2">
-                                <rect key="frame" x="0.0" y="132" width="375" height="491"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="cSA-kt-YYI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MO5-7Y-bVj"/>
@@ -49,16 +39,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TUo-3V-PT2" secondAttribute="trailing" id="3h2-k8-uFz"/>
-                            <constraint firstItem="lDa-bt-jlE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OAy-e4-StR"/>
                             <constraint firstAttribute="bottom" secondItem="wwX-Dm-0cu" secondAttribute="bottom" id="RxJ-cQ-wmo"/>
                             <constraint firstItem="wwX-Dm-0cu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Ryr-8Q-g8P"/>
-                            <constraint firstItem="lDa-bt-jlE" firstAttribute="top" secondItem="Ctx-qQ-LGM" secondAttribute="bottom" constant="8" id="XSZ-Kq-3V6"/>
-                            <constraint firstItem="Ctx-qQ-LGM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Y5m-Yx-HdH"/>
-                            <constraint firstItem="TUo-3V-PT2" firstAttribute="top" secondItem="lDa-bt-jlE" secondAttribute="bottom" constant="8" id="ZOG-w5-UT4"/>
+                            <constraint firstItem="TUo-3V-PT2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="WGj-6q-php"/>
                             <constraint firstItem="TUo-3V-PT2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dE2-Us-9RK"/>
-                            <constraint firstItem="lDa-bt-jlE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ep7-0G-Ds2"/>
                             <constraint firstItem="wwX-Dm-0cu" firstAttribute="top" secondItem="TUo-3V-PT2" secondAttribute="bottom" id="mbc-Ud-gPB"/>
-                            <constraint firstItem="Ctx-qQ-LGM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wKQ-8D-TJk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wwX-Dm-0cu" secondAttribute="trailing" id="wgA-Zg-P1k"/>
                         </constraints>
                     </view>
@@ -66,9 +51,7 @@
                     <connections>
                         <outlet property="editToolbar" destination="wwX-Dm-0cu" id="UXz-ch-b1I"/>
                         <outlet property="editToolbarButton" destination="R6K-dJ-CGP" id="brc-A0-GiE"/>
-                        <outlet property="memoCountLabel" destination="Ctx-qQ-LGM" id="oV1-an-P2T"/>
-                        <outlet property="memoSearchBar" destination="lDa-bt-jlE" id="xaM-7I-RFX"/>
-                        <outlet property="tableview" destination="TUo-3V-PT2" id="cfQ-cq-eqo"/>
+                        <outlet property="tableView" destination="TUo-3V-PT2" id="cfQ-cq-eqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,6 +74,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J3v-r0-hvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -15,11 +15,13 @@ class EditViewController: UIViewController {
     @IBOutlet weak var confirmBarButton: UIBarButtonItem!
     @IBOutlet weak var memoTextView: UITextView!
     
-    var isTitle = true
+//    var isTitle = true
     var memoTitle = ""
     var memoContent = ""
     
     let localRealm = try! Realm()
+    
+    var passedMemo: Memo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,17 @@ class EditViewController: UIViewController {
         confirmBarButton.tintColor = .systemOrange
         confirmBarButton.title = "완료"
        
+        if let memo = passedMemo {
+            memoTextView.text = "\(passedMemo!.memoTitle)\n\(passedMemo!.memoContent)"
+        } else {
+            memoTextView.text = ""
+        }
+        
+        
         memoTextView.becomeFirstResponder()
         memoTextView.delegate = self
+        
+//        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "fas", style: .plain, target: self, action: nil)]
         
     }
     
@@ -44,61 +55,42 @@ class EditViewController: UIViewController {
     
     @IBAction func onConfirmBarButtonClicked(_ sender: UIBarButtonItem) {
         
-//        let splitTextList: [String] = memoTextView.text.components(separatedBy: "\n")
-//
-//        memoTitle = splitTextList.first ?? "메모 없음"
-//
-//        if splitTextList.count >= 2 {
-//            for i in (1...splitTextList.count - 1){
-//                if i == 1 {
-//                    memoContent += splitTextList[i]
-//                } else {
-//                    memoContent += "\n" + splitTextList[i]
-//                }
-//            }
-//
-//        }
-//        print("memoTitle: ",memoTitle)
-//        print("memoContent: ",memoContent)
-        
-        
-        let splitTextList2 = memoTextView.text.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
+        let splitTextList2 = memoTextView.text.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: false)
         
 //        아예 비어있거나, content가 없는 경우에 대한 분기처리
         if memoTextView.text.isEmpty { // 아무것도 안쓴 경우 -> 삭제
-            print(0)
             navigationController?.popViewController(animated: true)
             return
             
         } else if splitTextList2.count == 1 { // 제목만 있는 경우
             memoTitle = String(splitTextList2[0])
             
-        } else {
+        } else { // 내용만 있는 경우 / 내용,제목이 모두 있는 경우
             memoTitle = String(splitTextList2[0])
             memoContent = String(splitTextList2[1])
-            print("splitTextList2[0] :", splitTextList2[0])
-            print("splitTextList2[1] :", splitTextList2[1])
         }
         
-        let task = Memo(memoTitle: memoTitle, memoContent: memoContent, memoDate: Date())
-        
-        try! localRealm.write {
-            localRealm.add(task)
+        if passedMemo == nil { // 새롭게 작성
+            let task = Memo(memoTitle: memoTitle, memoContent: memoContent, memoDate: Date())
+            
+            try! localRealm.write {
+                localRealm.add(task)
+            }
+        } else { // 수정
+            let task = passedMemo
+            
+            try! localRealm.write {
+                task?.memoTitle = memoTitle
+                task?.memoContent = memoContent
+            }
         }
         
+        navigationController?.popViewController(animated: true)
         
     }
 }
 
 extension EditViewController: UITextViewDelegate {
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-        if text == "\n" && isTitle{
-            print("return")
-            isTitle = false
-        }
-        return true
-    }
     
 }

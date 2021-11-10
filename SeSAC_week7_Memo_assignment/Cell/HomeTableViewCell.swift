@@ -24,6 +24,10 @@ class HomeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        titleLabel.textColor = .white
+        titleLabel.font = .boldSystemFont(ofSize: 15)
+        contentLabel.textColor = .lightGray
+        contentLabel.font = .systemFont(ofSize: 10)
         // Configure the view for the selected state
     }
     
