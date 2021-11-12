@@ -72,7 +72,7 @@ class EditViewController: UIViewController {
                 let alert = UIAlertController(title: "저장 및 공유하기", message: "현재 메모를 저장하고 공유하시겠습니까?", preferredStyle: .alert)
                 
                 let ok = UIAlertAction(title: "공유", style: .default){ _ in
-                    self.saveMemo()
+//                    self.saveMemo()
                     self.saveTextFile()
                     self.presentActivityViewController()
                 }
@@ -138,7 +138,7 @@ class EditViewController: UIViewController {
     
     
     func saveTextFile() {
-        if passedMemo != nil {
+        if passedMemo != nil { // 수정화면
             
             let title: String? = passedMemo!.memoTitle
             let content: String? = passedMemo!.memoContent
@@ -148,6 +148,15 @@ class EditViewController: UIViewController {
 
             do {
                 try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+                print("알 수 없는 오류가 발생했습니다")
+            }
+        } else { //
+            let str = memoTextView.text
+            let filename = getDocumentsDirectory().appendingPathComponent("text.txt")
+
+            do { //
+                try str!.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
             } catch {
                 print("알 수 없는 오류가 발생했습니다")
             }
@@ -185,7 +194,8 @@ class EditViewController: UIViewController {
         let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
         
         self.present(vc, animated: true, completion: nil)
-    
+        
+        navigationController?.popViewController(animated: true)
     }
 }
 
