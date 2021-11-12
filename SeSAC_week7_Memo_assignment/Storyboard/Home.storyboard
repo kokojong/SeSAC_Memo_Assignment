@@ -39,12 +39,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TUo-3V-PT2" secondAttribute="trailing" id="3h2-k8-uFz"/>
-                            <constraint firstAttribute="bottom" secondItem="wwX-Dm-0cu" secondAttribute="bottom" id="RxJ-cQ-wmo"/>
                             <constraint firstItem="wwX-Dm-0cu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Ryr-8Q-g8P"/>
                             <constraint firstItem="TUo-3V-PT2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="WGj-6q-php"/>
                             <constraint firstItem="TUo-3V-PT2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dE2-Us-9RK"/>
                             <constraint firstItem="wwX-Dm-0cu" firstAttribute="top" secondItem="TUo-3V-PT2" secondAttribute="bottom" id="mbc-Ud-gPB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wwX-Dm-0cu" secondAttribute="trailing" id="wgA-Zg-P1k"/>
+                            <constraint firstItem="wwX-Dm-0cu" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="zr7-qS-j9Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QN4-RT-R5a"/>

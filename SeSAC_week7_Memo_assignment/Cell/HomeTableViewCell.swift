@@ -16,19 +16,17 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       
+        self.backgroundColor = .black
         titleLabel.textColor = .black
         contentLabel.textColor = .black
+        titleLabel.font = .boldSystemFont(ofSize: 15)
+        contentLabel.font = .systemFont(ofSize: 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        titleLabel.textColor = .white
-        titleLabel.font = .boldSystemFont(ofSize: 15)
-        contentLabel.textColor = .lightGray
-        contentLabel.font = .systemFont(ofSize: 10)
-        // Configure the view for the selected state
     }
     
 }

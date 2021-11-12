@@ -32,8 +32,6 @@ class PopupViewController: UIViewController {
         confirmButton.backgroundColor = .systemOrange
         confirmButton.setTitleColor(.white, for: .normal)
     
-
-       
     }
     
 

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzh-MI-vbf">
-                                <rect key="frame" x="83" y="324" width="248" height="248"/>
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-UL-SBC">
-                                        <rect key="frame" x="20" y="8" width="208" height="181"/>
+                                        <rect key="frame" x="20" y="8" width="167" height="140"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTB-pU-XFI">
-                                                <rect key="frame" x="58.5" y="58" width="91.5" height="65"/>
+                                                <rect key="frame" x="38" y="37.5" width="91.5" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-cB-SA8">
                                                         <rect key="frame" x="8" y="8" width="75.5" height="20.5"/>
@@ -57,7 +57,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-do-lOI">
-                                        <rect key="frame" x="20" y="197" width="208" height="31"/>
+                                        <rect key="frame" x="20" y="156" width="167" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="확인"/>
                                         <connections>
@@ -82,7 +82,7 @@
                         <color key="backgroundColor" white="0.3439087121665072" alpha="0.25114562179868583" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zzh-MI-vbf" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CKg-0v-7GV"/>
-                            <constraint firstItem="zzh-MI-vbf" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="TuX-df-UQu"/>
+                            <constraint firstItem="zzh-MI-vbf" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="TuX-df-UQu"/>
                             <constraint firstItem="zzh-MI-vbf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aSo-gS-CyN"/>
                         </constraints>
                     </view>

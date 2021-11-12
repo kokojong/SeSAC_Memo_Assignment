@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UILabel.appearance().textColor = .white
         UIButton.appearance().tintColor = .systemOrange
+
         return true
     }
 
